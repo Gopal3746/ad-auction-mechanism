@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "base_auctions": 10000,
+  "raw_bids": 64889,
+  "calibration_auctions": 2001,
+  "evaluation_auctions": 7999,
+  "bid_events_across_mechanisms": 194667,
+  "auction_outcomes_across_mechanisms": 30000,
+  "calibration_value_medians_by_placement": {
+    "placement_commerce": 3.1211764214624442,
+    "placement_finance": 5.160443281721728,
+    "placement_mobile": 2.2026950868422945,
+    "placement_news": 1.2867960356617962,
+    "placement_video": 4.623134649053931
+  }
+}
