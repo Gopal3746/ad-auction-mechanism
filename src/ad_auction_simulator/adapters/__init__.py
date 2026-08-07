@@ -1,0 +1,1 @@
+"""Optional real-data adapters."""

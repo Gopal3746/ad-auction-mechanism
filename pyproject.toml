@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ad-auction-mechanism-simulator"
+version = "0.1.0"
+description = "Synthetic RTB auction simulation, ETL, warehousing, statistical analysis, and dashboarding."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Gopal Kamineni"}]
+dependencies = [
+  "duckdb>=1.2,<2",
+  "numpy>=2,<3",
+  "pandas>=2.2,<4",
+  "pyarrow>=17,<25",
+  "scipy>=1.13,<2",
+  "streamlit>=1.40,<2",
+]
+
+[project.optional-dependencies]
+ai = ["openai>=1.75,<3", "python-dotenv>=1.0,<2"]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1"]
+
+[project.scripts]
+auction-sim = "ad_auction_simulator.run_pipeline:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
